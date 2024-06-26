@@ -48,7 +48,9 @@ public class StreamMain {
 		
 		//On met le stream dans un nouveau set
 		maListe.stream().collect(Collectors.toSet());
-		
+
+		//On trie le stream par longueur de chaîne croissante
+		maListe.stream().sorted((s1,s2)-> s1.length() - s2.length()).forEach(System.out::println);;
 	}
 
 }
