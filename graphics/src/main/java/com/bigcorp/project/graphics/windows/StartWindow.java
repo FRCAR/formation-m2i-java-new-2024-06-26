@@ -1,5 +1,8 @@
 package com.bigcorp.project.graphics.windows;
 
+import java.util.ServiceLoader;
+
+import com.bigcorp.project.data.contract.AddressService;
 import com.bigcorp.project.data.model.User;
 import com.bigcorp.project.data.repository.UserRepositoryImpl;
 
@@ -29,11 +32,11 @@ public class StartWindow {
 //		System.out.println(user.getFirstName());
 		
 		//Utilisation des services
-//		AddressService addressService = ServiceLoader
-//				.load(AddressService.class)
-//				.findFirst()
-//				.orElseThrow();
-//		System.out.println(addressService.getPostCode("43434"));
+		AddressService addressService = ServiceLoader
+				.load(AddressService.class)
+				.findFirst()
+				.orElseThrow();
+		System.out.println(addressService.getPostCode("43434"));
 	}
 
 }

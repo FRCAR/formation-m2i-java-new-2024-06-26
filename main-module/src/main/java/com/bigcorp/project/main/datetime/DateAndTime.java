@@ -36,7 +36,7 @@ public class DateAndTime {
 		LocalDate date = LocalDate.parse("2029-03-28", DateTimeFormatter.ISO_DATE);
 
 		Boolean isYearAfter2000 = now.query(t -> t.get(ChronoField.YEAR) > 2000);
-
+		
 		// Trouver le dernier jour d'une année
 		LocalDate lastDayOfYear = LocalDate.of(2000, 1, 15).with(TemporalAdjusters.lastDayOfYear());
 		System.out.println("Le dernier jour de l'année est : " + lastDayOfYear);
